@@ -18,6 +18,7 @@ function showContainer() {
         }
 }
 
+
 const myArray = [];
 numeroCasuale = '';
 
@@ -27,8 +28,10 @@ const numeroCasuale = Math.floor(Math.random() * 100);
 myArray.push(numeroCasuale);
 console.log(myArray);
 
-function easy() {
 
+function easy() {
+    document.getElementById('punteggio').innerHTML = '';
+    document.getElementById('copri').classList.add('hidden');
    /* const myArray = [];
     numeroCasuale = '';
 
@@ -71,6 +74,7 @@ function easy() {
                 if(myArray[x] === i) {
                     newBox.style.backgroundColor = 'red';
                     document.getElementById('punteggio').innerHTML = 'Hai perso - clicca play per ritentare';
+                    document.getElementById('copri').classList.remove('hidden');
                 }
             }
         }
@@ -82,6 +86,8 @@ function easy() {
 
 
 function medium() {
+    document.getElementById('punteggio').innerHTML = '';
+    document.getElementById('copri').classList.add('hidden');
 
    /* const myArray = [];
     numeroCasuale = '';
@@ -123,7 +129,8 @@ function medium() {
         for (let x = 0; x < myArray.length; x++) {
             if(myArray[x] === i) {
                 newBox.style.backgroundColor = 'red';
-                document.getElementById('punteggio').innerHTML = 'Hai perso - clicca play per ritentare';
+                document.getElementById('punteggio').innerHTML = 'Hai perso, clicca play per ritentare';
+                document.getElementById('copri').classList.remove('hidden');
             }
         }
     }
@@ -137,6 +144,8 @@ function medium() {
 
 
 function hard() {
+    document.getElementById('punteggio').innerHTML = '';
+    document.getElementById('copri').classList.add('hidden');
 
     /* const myArray = [];
     numeroCasuale = '';
@@ -178,7 +187,8 @@ function hard() {
         for (let x = 0; x < myArray.length; x++) {
             if(myArray[x] === i) {
                 newBox.style.backgroundColor = 'red';
-                document.getElementById('punteggio').innerHTML = 'Hai perso - clicca play per ritentare';
+                document.getElementById('punteggio').innerHTML = "Hai perso - clicca play per ritentare";
+                document.getElementById('copri').classList.remove('hidden');
             }
         }
     }
